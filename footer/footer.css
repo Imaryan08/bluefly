@@ -33,6 +33,7 @@
   line-height: 1;
   letter-spacing: 0em;
   margin: 0 0 15px;
+  padding: 0 10px;
   color: #000;
 }
 
@@ -63,6 +64,68 @@ button {
   text-align: center;
 }
 
+/* Footer CSS */
+footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.footSection {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding-top: 40px;
+  padding-left: 40px;
+  margin: auto;
+  gap: 10px;
+  background-color: #e6e6e6;
+  margin-top: -80px;
+}
+
+.footSection a {
+  text-decoration: none;
+  color: rgb(48, 46, 46);
+}
+
+.footSection h3 {
+  letter-spacing: 3px;
+}
+
+.section3 > p {
+  text-align: left;
+  width: 90%;
+  color: #000;
+  line-height: 1.5;
+  letter-spacing: 1.1px;
+}
+.section3 > input {
+  width: 80%;
+  height: 30px;
+  padding: 8px 10px;
+  font-size: 16px;
+  margin: 5px 0 20px 0;
+}
+.section3 > button {
+  width: 73%;
+  background-color: #000;
+  color: #fff;
+  padding: 15px;
+  font-size: 16px;
+  letter-spacing: 8px;
+}
+
+.copyright {
+  background-color: #e6e6e6;
+  text-align: center;
+  font-size: 12px;
+  padding: 7.5px 0;
+  padding-top: 30px;
+  color: rgb(63, 60, 60);
+}
+.footerLogo > img {
+  width: 18%;
+  margin-bottom: 10px;
+}
+/* media query */
 
 @media only screen and (max-width: 800px) {
   .footParent {
@@ -81,4 +144,21 @@ button {
     margin-bottom: 30px;
   }
 
+  .footSection {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    text-align: center;
+    width: 96%;
+    margin: auto;
+    gap: 10px;
+  }
+  .section3 > p {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+  }
+  .footerLogo > img {
+    width: 50%;
+    margin-bottom: 10px;
+  }
 }
