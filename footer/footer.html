@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+    />
   </head>
   <body>
     <section>
@@ -56,54 +60,81 @@
     <footer>
       <div class="footSection">
         <div class="section1">
-          <h3><a href="#">ABOUT US</a></h3>
-          <p><a href="#">Contact Us</a></p>
-          <p><a href="#">Frequently Asked Questions</a></p>
-          <p><a href="#">Shipping & Returns</a></p>
-          <p><a href="#">Pre-Owned Guide</a></p>
-          <p><a href="#">Sell on Bluefly</a></p>
-          <p><a href="#">Privacy policy</a></p>
-          <p><a href="#">Terms & Conditions</a></p>
+          <h3>
+            ABOUT US
+            <span>
+              <i id="downArrow" class="fa fa-caret-down fa-1x"></i>
+              <i id="upArrow" class="fa fa-caret-up fa-1x"></i>
+            </span>
+          </h3>
+          <span class="aboutUs">
+            <p><a href="#">Shipping & Returns</a></p>
+            <p><a href="#">Pre-Owned Guide</a></p>
+            <p><a href="#">Contact Us</a></p>
+            <p><a href="#">Sell on Bluefly</a></p>
+            <p><a href="#">Frequently Asked Questions</a></p>
+            <p><a href="#">Privacy policy</a></p>
+            <p><a href="#">Terms & Conditions</a></p>
+          </span>
         </div>
 
         <div class="section2">
-          <h3><a href="#">POLICY</a></h3>
-          <p><a href="#">Return Policy</a></p>
-          <p><a href="#">Terms Of use</a></p>
-          <p><a href="#">Cancellation & Returns</a></p>
-          <p><a href="#">EPR Compilance</a></p>
-          <p><a href="#">Security</a></p>
-          <p><a href="#">Terms & Conditions</a></p>
+          <h3>
+            POLICY
+            <span>
+              <i id="downArrow1" class="fa fa-caret-down fa-1x"></i>
+              <i id="upArrow1" class="fa fa-caret-up fa-1x"></i>
+            </span>
+          </h3>
+          <span class="policy">
+            <p><a href="#">Return Policy</a></p>
+            <p><a href="#">Terms Of use</a></p>
+            <p><a href="#">Cancellation & Returns</a></p>
+            <p><a href="#">EPR Compilance</a></p>
+            <p><a href="#">Security</a></p>
+            <p><a href="#">Terms & Conditions</a></p>
+          </span>
         </div>
 
         <div class="section4">
-          <h3>SOCIAL</h3>
-          <p><a href="#">Facebook</a></p>
-          <p><a href="#">Twitter</a></p>
-          <p><a href="#">YouTube</a></p>
-          <p><a href="#">Linkedin</a></p>
-          <p><a href="#">Instagram</a></p>
+          <h3>
+            SOCIAL
+            <span>
+              <i id="downArrow2" class="fa fa-caret-down fa-1x"></i>
+              <i id="upArrow2" class="fa fa-caret-up fa-1x"></i>
+            </span>
+          </h3>
+          <span class="socialHandle">
+            <p><a href="#">Facebook</a></p>
+            <p><a href="#">Twitter</a></p>
+            <p><a href="#">YouTube</a></p>
+            <p><a href="#">Linkedin</a></p>
+            <p><a href="#">Instagram</a></p>
+          </span>
         </div>
-        
+
         <div class="section3">
           <h3>SIGN & SAVE</h3>
           <p>Subscribe to get exclusive offers on designer brand</p>
           <input type="text" placeholder="Enter your email" id="" />
-          <button>Subscribe</button>
+          <button href="#">Subscribe</button>
         </div>
-
-        
       </div>
 
       <div class="copyright">
-          <div class="footerLogo">
-              <img src="https://cdn.shopify.com/s/files/1/0248/3473/6191/files/Untitled_2_.png_5_x104@2x.png?v=1620852820" alt="">
-          </div>
+        <div class="footerLogo" onclick="footerLogo()">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0248/3473/6191/files/Untitled_2_.png_5_x104@2x.png?v=1620852820"
+            alt=""
+          />
+        </div>
         <p>
           © 2022 Bluefly 1998-2020 BLUEFLY.COM OR ITS AFFILIATES ALL RIGHTS
           RESERVED.
         </p>
       </div>
     </footer>
+
+    <script src="./footer.js"></script>
   </body>
 </html>
