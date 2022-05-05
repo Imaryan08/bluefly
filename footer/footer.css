@@ -1,0 +1,84 @@
+.footParent {
+  display: flex;
+  justify-content: space-between;
+  width: 96%;
+  margin: auto;
+}
+
+.products {
+  width: 32%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.ImgParent {
+  width: 100%;
+  height: 50%;
+  object-fit: contain;
+  padding-bottom: 4%;
+}
+
+.products > a > img {
+  width: 100%;
+  object-fit: fill;
+  height: 100%;
+}
+
+.prodName {
+  font-family: Tiemann, serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1.5em;
+  line-height: 1;
+  letter-spacing: 0em;
+  margin: 0 0 15px;
+  color: #000;
+}
+
+.prodCat {
+  font-family: Tiemann, serif;
+  font-weight: 400;
+  font-size: 1em;
+  margin: 0 0 15px;
+  color: #000;
+}
+
+button {
+  /* margin: auto; */
+  color: #000;
+  border-color: #e8e8e1;
+  background-color: transparent;
+  font-weight: 400;
+  font-size: 12px;
+  min-width: 90px;
+  line-height: 1.42;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  display: inline-block;
+  background-position: 150% 45%;
+  padding: 8px 14px;
+  border: 1px solid #e8e8e1;
+  text-decoration: none;
+  text-align: center;
+}
+
+
+@media only screen and (max-width: 800px) {
+  .footParent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 96%;
+    margin: auto;
+  }
+  .products {
+    margin: auto;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+}
