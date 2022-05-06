@@ -4,6 +4,8 @@ import { slideData } from '../components/SlideData';
 import { useState,useEffect } from 'react';
 import "./Signup.css";
 import { BelowData } from '../components/BelowData';
+import {useNavigate} from "react-router-dom";
+
 
 
 const Container = styled.div`
@@ -42,6 +44,7 @@ const Button = styled.button`
     letter-spacing: 0.35em;
     color:white;
     font-weight: bolder;
+    cursor: pointer;
 `
 const Create = styled.p`
    font-size: 15.8px;
@@ -60,6 +63,7 @@ const Offer = styled.div`
 const Signup = () => {
   const [currentSlide , setCurrentSlide] = useState(0);
   const slideLength = slideData.length;
+  let navigate = useNavigate();
 
   const autoScroll = true;
   let slideInterval;
@@ -111,7 +115,7 @@ const Signup = () => {
     </div>
     
      <input type="text" className='input1'/>
-     <Button>SIGN IN</Button><br/>
+     <Button onClick={()=> {navigate("/register")}}>SIGN IN</Button><br/>
      <Create>Create account</Create>
 
     </Inputitem>
