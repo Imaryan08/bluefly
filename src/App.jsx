@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-// import "./footer/footer.css";
-// import "./footer/footer";
-// import  "font_awosome"
+import "./footer.css";
 import { Route, Routes } from "react-router-dom";
 import { Navbar } from "./components/Navbar";
 import { Home } from "./components/Home";
