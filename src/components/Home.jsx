@@ -1,7 +1,6 @@
 import "./Home.css"
 
 
-
 export const Home = () => {
     return (
         <div className="home">
@@ -175,9 +174,8 @@ export const Home = () => {
                 <button className="btn1">VIEW ALL</button>
                 
             
-        </div>
-
         
-      
+     
+        </div>
     );
   };
