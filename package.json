@@ -4,7 +4,9 @@
   "description": "Bluefly is the original online fashion retailer. Today, Bluefly is a fast growing, fashion marketplace offering 3,000+ brands across shoes, handbags, dresses, sportswear, cashmere and even diamonds. Bluefly's curated events bring you the best of the splurge and the steal all in one place and all at compelling discounts.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "repository": {
     "type": "git",
@@ -25,6 +27,10 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.3.2",
     "nodemailer": "^6.7.5",
-    "nodemon": "^2.0.16"
+    "nodemon": "^2.0.16",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "^6.3.0",
+    "styled-components": "^5.3.5"
   }
 }
