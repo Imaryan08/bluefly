@@ -60,3 +60,17 @@ hr{
     border:1px solid #959594 ;
     background-color:transparent;
 }
+.wap{
+    margin-top: 15px;
+}
+.pass1{
+    display:flex;
+    justify-content: space-between;
+    margin-top: 27px;
+}
+#cb{
+    margin:20px 12px;
+    margin-left: 40px;
+    height:15px;
+    width:16px;
+}

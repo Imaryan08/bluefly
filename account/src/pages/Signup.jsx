@@ -8,7 +8,7 @@ import {useNavigate} from "react-router-dom";
 
 
 
-const Container = styled.div`
+export const Container = styled.div`
   
     width:100%;
     background-color: black;
@@ -16,7 +16,7 @@ const Container = styled.div`
    text-align: center;
    padding: 1px ;
 `
-const Heading = styled.h1`
+export const Heading = styled.h1`
     font-family: Tiemann ,serif;
     font-weight: 500;
     letter-spacing: 0em;
@@ -28,14 +28,14 @@ const Heading = styled.h1`
     margin-left: 46%;
     
 `
-const Inputitem = styled.div`
+ export const Inputitem = styled.div`
  
   height:310px;
   width:450px;
   margin-top: 40px;
   margin-left: 34%;
 `
-const Button = styled.button`
+export const Button = styled.button`
     height:45px;
     width:99%;
     margin-top: 7%;
@@ -46,18 +46,20 @@ const Button = styled.button`
     font-weight: bolder;
     cursor: pointer;
 `
-const Create = styled.p`
+export const Create = styled.p`
    font-size: 15.8px;
    padding-top:3px;
    padding-left: 38.4%;
+   cursor: pointer;
 `
-const Offer = styled.div`
+export const Offer = styled.div`
   display: grid;
   grid-template-columns: repeat(3,1fr);
   grid-gap:7px;
   margin-top: 25px;
   text-align: center;
   margin-bottom: 50px;
+  
 `
 
 const Signup = () => {
@@ -115,8 +117,8 @@ const Signup = () => {
     </div>
     
      <input type="text" className='input1'/>
-     <Button onClick={()=> {navigate("/register")}}>SIGN IN</Button><br/>
-     <Create>Create account</Create>
+     <Button onClick={()=> {navigate("/")}}>SIGN IN</Button><br/>
+     <Create onClick={()=> {navigate("/register")}}>Create account</Create>
 
     </Inputitem>
     <hr/>
@@ -124,10 +126,10 @@ const Signup = () => {
       {BelowData.map((elem) => {
         return(
           <div key={elem.id}>
-              <img src={elem.image} className="pics"/>
+              <img src={elem.image} className="pics" style={{cursor: "pointer"}}/>
               <p className='p1'>{elem.disp}</p>
               <p>{elem.short}</p>
-              <button className='btn-modi'>{elem.btn}</button>
+              <button className='btn-modi' style={{cursor: "pointer"}} >{elem.btn}</button>
           </div>
          
         )
