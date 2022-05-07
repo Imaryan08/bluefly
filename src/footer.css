@@ -1,0 +1,198 @@
+
+.footParent {
+  display: flex;
+  justify-content: space-between;
+  width: 96%;
+  margin: auto;
+}
+button{
+    cursor: pointer;
+}
+#upArrow,
+#downArrow,
+#upArrow1,
+#downArrow1,
+#upArrow2,
+#downArrow2 {
+  display: none;
+  cursor: pointer;
+  color: rgb(106, 101, 101);
+}
+
+.products {
+  width: 32%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.ImgParent {
+  width: 100%;
+  height: 50%;
+  object-fit: contain;
+  padding-bottom: 4%;
+}
+
+.products > a > img {
+  width: 100%;
+  object-fit: fill;
+  height: 100%;
+}
+
+.prodName {
+  font-family: Tiemann, serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1.5em;
+  line-height: 1;
+  letter-spacing: 0em;
+  margin: 0 0 15px;
+  padding: 0 10px;
+  color: #000;
+}
+
+.prodCat {
+  font-family: Tiemann, serif;
+  font-weight: 400;
+  font-size: 1em;
+  margin: 0 0 15px;
+  color: #000;
+}
+
+button {
+  /* margin: auto; */
+  color: #000;
+  border-color: #e8e8e1;
+  background-color: transparent;
+  font-weight: 400;
+  font-size: 12px;
+  min-width: 90px;
+  line-height: 1.42;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  display: inline-block;
+  background-position: 150% 45%;
+  padding: 8px 14px;
+  border: 1px solid #e8e8e1;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* Footer CSS */
+footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.footSection {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding-top: 40px;
+  margin: auto;
+  gap: 10px;
+  background-color: #e6e6e6;
+  margin-top: -80px;
+}
+.section1 {
+  padding-left: 40px;
+}
+.footSection a {
+  text-decoration: none;
+  color: rgb(48, 46, 46);
+}
+
+.footSection h3 {
+  letter-spacing: 3px;
+}
+
+.section3 > p {
+  text-align: left;
+  width: 90%;
+  color: #000;
+  line-height: 1.5;
+  letter-spacing: 1.1px;
+}
+.section3 > input {
+  width: 70%;
+  height: 30px;
+  padding: 8px 10px;
+  font-size: 16px;
+  margin: 5px 0 20px 0;
+}
+.section3 > button {
+  width: 73%;
+  background-color: #000;
+  color: #fff;
+  padding: 15px;
+  font-size: 16px;
+  letter-spacing: 8px;
+  cursor: pointer;
+}
+
+.copyright {
+  background-color: #e6e6e6;
+  text-align: center;
+  font-size: 12px;
+  padding: 7.5px 0;
+  padding-top: 30px;
+  color: rgb(63, 60, 60);
+  /* border: 1px solid red; */
+  width: 100%;
+}
+.footerLogo > img {
+  width: 18%;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+/* media query */
+
+@media only screen and (max-width: 800px) {
+  .footParent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 96%;
+    margin: auto;
+  }
+  .section1 {
+    padding-left: 0px;
+  }
+  .products {
+    margin: auto;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .footSection {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    gap: 10px;
+  }
+  .section3 > p {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+  }
+  .footerLogo > img {
+    width: 50%;
+    margin-bottom: 10px;
+  }
+
+  #downArrow,
+  #downArrow1,
+  #downArrow2 {
+    display: inline-block;
+  }
+
+  .aboutUs,
+  .socialHandle,
+  .policy {
+    display: none;
+  }
+}
