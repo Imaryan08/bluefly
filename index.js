@@ -10,6 +10,7 @@ app.use(express.json());
 
 app.use("/api/auth",require("./routes/auth"))
 app.use("/api/private",require("./routes/private"))
+app.use("/products",require("./routes/product"))
 
 app.listen(port,()=>{
     console.log(`server running on port ${port}`)
