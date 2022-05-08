@@ -9,7 +9,7 @@ import "./product.css";
 import {
   Accordion,
   AccordionItem,
-  AccordionButton,
+  AccordionButton, 
   AccordionPanel,
   AccordionIcon,
   Box,

@@ -8,6 +8,9 @@ import { Home } from "./components/Home";
 import { Footers } from "./components/Footer";
 import Register from "./pages/Register";
 import Signup from "./pages/Signup";
+import Productcomp from "./components/ProductComponents/Productcomp";
+// import Singletodo from "./components/SingleProductCopm/SingleProduct";
+
 
 function App() {
   return (
@@ -20,6 +23,8 @@ function App() {
         <Route path="/" element={<Home />}></Route>
         <Route path="/register" element={<Register />}></Route>
         <Route path="/signin" element={<Signup />}></Route>
+        <Route path="/product" element={<Productcomp />}></Route>
+        {/* <Route path="/product/:id" element={<Singletodo />}></Route> */}
       </Routes>
 
       <div>
