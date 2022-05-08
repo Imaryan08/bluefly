@@ -1,0 +1,97 @@
+.row{
+    display:flex;
+    justify-content: space-between;
+    width:95%;
+    margin-top: 26px;
+
+}
+hr{
+    margin:15px 28px;
+    border:0.5px solid rgb(236, 233, 233);
+}
+.sub_total{
+    font-family: Tiemann ,serif;
+    font-weight: 500;
+    letter-spacing: 0.25em;
+    line-height: 1;
+    text-transform: uppercase;
+    font-size: 14px;
+    display: block;
+    
+  
+}
+.total{
+    font-family: Tiemann ,serif;
+    font-weight: 500;
+    letter-spacing: 0.173em;
+    line-height: 1;
+    font-size: 16px;
+    
+    
+}
+.sub_des{
+    font-size: 13.5px;
+    margin-left:17px;
+   
+}
+.product img{
+  height:95px;
+  width:60px;
+  border-radius: 5px;
+}
+.prod-container{
+    position:absolute;
+    width:100%;
+   
+}
+.container img{
+    height:105px;
+    width:100px;
+    margin:13px;
+}
+.set1{
+    display: flex;
+}
+.set2{
+    margin-top: 15px;
+    margin-left: 16px;
+}
+.set3{
+    margin: 0px 16px;
+
+}
+.product2{
+    margin-bottom: 20px;
+}
+.set4{
+    display:flex;
+    width:95%;
+    height:40px;
+    
+    margin-top: 20px;
+    justify-content: space-between;
+
+}
+.set5{
+   
+    display:flex;
+    height:26px;
+    width:43%;
+    margin-top: 7px;
+}
+.set5 img {
+    height:20px;
+    width:20px;
+    margin-bottom: 10px;
+}
+.set6{
+    margin-top: 1px;
+    margin-left: 7px;
+}
+.pic1{
+    height:105px;
+    width:100px;
+}
+.pic2{
+    margin-left: 10px;
+}
