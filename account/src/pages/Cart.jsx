@@ -34,7 +34,7 @@ export const Cartdiv = styled.div`
  margin-left: 6%;
  
 `
-const Item = styled.div`
+export const Item = styled.div`
   
     height:340px;
     width:91%;

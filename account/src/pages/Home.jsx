@@ -2,12 +2,14 @@ import React from 'react';
 import { Products } from '../components/Products';
 import { useState } from 'react';
 import  Singleprod  from './Singleprod';
+import { useContext } from 'react';
+import { Cartprod } from '../components/Context';
 import Cart from "./Cart";
 import "./Cart.css"
 
 export const Home = () => {
  const [show , setShow] = useState(false);
- const [cart , setCart] = useState([])
+ const [cart , setCart] = useContext(Cartprod)
 
  const onAdd = (prod) => {
      const exsit = cart.find(x => x.id === prod.id);
