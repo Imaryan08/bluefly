@@ -114,7 +114,7 @@ const Register = () => {
        <input type="checkbox" id="cb"/>
        <p>Subscribe to stay updated with new offers!</p>
      </Sub>
-     <Button onClick={()=> {navigate("/")}}>CREATE</Button><br/>
+     <Button onClick={()=> {navigate("/signup")}}>CREATE</Button><br/>
      
 
     </Inputitem>
