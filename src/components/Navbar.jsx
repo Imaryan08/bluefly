@@ -22,7 +22,7 @@ export const Navbar= ()=>{
                 <Link className="nav" to="/men">MEN</Link>
                 <Link className="nav" to="/sunglasses">SUNGLASSES</Link>
                 <Link className="nav" to="/jewelry">JEWELRY & WATCHES</Link>
-                <Link className="nav" to="/login">LOGIN</Link>
+                <Link className="nav" to="/signin">LOGIN</Link>
                 <Link className="nav" to="/cart">🛒CART</Link>
                 {/* <Link className="clear" to="/clearance">CLEARANCE</Link> */}
             </div>

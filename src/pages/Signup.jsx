@@ -47,9 +47,10 @@ export const Button = styled.button`
     cursor: pointer;
 `
 export const Create = styled.p`
-   font-size: 15.8px;
+   font-size: 16.8px;
    padding-top:3px;
-   padding-left: 38.4%;
+   padding-left: 1.4%;
+   margin-top: 10px;
    cursor: pointer;
 `
 export const Offer = styled.div`
@@ -87,42 +88,53 @@ const Signup = () => {
  },[currentSlide])
 
   return (
-    <div className='login-page'>
-    <Container className='slide'>
-      {slideData.map((slide,index) => {
-        return (
-          <div key={index} >
-            {index===currentSlide && (
-              <>
-              <p className='item'>{slide.title}</p>
-              </>
-            )}
+    <div className="login-page">
+      <Container className="slide">
+        {slideData.map((slide, index) => {
+          return (
+            <div key={index}>
+              {index === currentSlide && (
+                <>
+                  <p className="item">{slide.title}</p>
+                </>
+              )}
+            </div>
+          );
+        })}
+      </Container>
+      <Heading>LOGIN</Heading>
+      <Inputitem>
+        <div>
+          <label className="l1" style={{ marginLeft: "-410px" }}>
+            EMAIL
+          </label>
+          <br />
+          <input type="text" className="input1" />
+        </div>
+        <div className="pass">
+          <label className="l1">PASSWORD</label>
+          <label className="l1">Forgot password?</label>
+        </div>
 
-          </div>
-         
-        )
-      })}
-    </Container>
-    <Heading>LOGIN</Heading>
-    <Inputitem>
-    <div>
-    <label className='l1'>EMAIL</label>
-     <br/>
-     <input type="text" className='input1'/>
-
-    </div>
-    <div  className='pass'>
-    <label className='l1'>PASSWORD</label>
-    <label className='l1'>Forgot password?</label>
-    </div>
-    
-     <input type="text" className='input1'/>
-     <Button onClick={()=> {navigate("/")}}>SIGN IN</Button><br/>
-     <Create onClick={()=> {navigate("/register")}}>Create account</Create>
-
-    </Inputitem>
-    <hr/>
-    <Offer>
+        <input type="text" className="input1" />
+        <Button
+          onClick={() => {
+            navigate("/");
+          }}
+        >
+          SIGN IN
+        </Button>
+        <br />
+        <Create
+          onClick={() => {
+            navigate("/register");
+          }}
+        >
+          Create account
+        </Create>
+      </Inputitem>
+      <hr />
+      {/* <Offer>
       {BelowData.map((elem) => {
         return(
           <div key={elem.id}>
@@ -135,10 +147,9 @@ const Signup = () => {
         )
       })}
 
-    </Offer>
-   
+    </Offer> */}
     </div>
-  )
+  );
 }
 
 export default Signup

@@ -69,57 +69,62 @@ const Register = () => {
  },[currentSlide])
 
   return (
-    <div className='register-page'>
-        <Container className='slide'>
-      {slideData.map((slide,index) => {
-        return (
-          <div key={index} >
-            {index===currentSlide && (
-              <>
-              <p className='item'>{slide.title}</p>
-              </>
-            )}
+    <div className="register-page">
+      <Container className="slide">
+        {slideData.map((slide, index) => {
+          return (
+            <div key={index}>
+              {index === currentSlide && (
+                <>
+                  <p className="item">{slide.title}</p>
+                </>
+              )}
+            </div>
+          );
+        })}
+      </Container>
+      <Heading>CREATE ACCOUNT</Heading>
+      <Inputitem>
+        <div>
+          <label className="l1" style={{ marginLeft: "-380px" }}>
+            FIRST NAME
+          </label>
+          <br />
+          <input type="text" className="input1" />
+        </div>
+        <div className="pass">
+          <label className="l1">LAST NAME</label>
+        </div>
 
-          </div>
-         
-        )
-      })}
-    </Container>
-    <Heading>CREATE ACCOUNT</Heading>
-    <Inputitem>
-    <div>
-    <label className='l1'>FIRST NAME</label>
-     <br/>
-     <input type="text" className='input1'/>
+        <input type="text" className="input1" />
 
-    </div>
-    <div  className='pass'>
-    <label className='l1'>LAST NAME</label>
-    </div>
-    
-     <input type="text" className='input1'/>
-    
-     <div className='wap'>
-    <label className='l1'>EMAIL</label>
-     <br/>
-     <input type="text" className='input1'/>
+        <div className="wap">
+          <label className="l1" style={{ marginLeft: "-410px" }}>
+            EMAIL
+          </label>
+          <br />
+          <input type="text" className="input1" />
+        </div>
+        <div className="pass1">
+          <label className="l1">PASSWORD</label>
+        </div>
 
-    </div>
-    <div  className='pass1'>
-    <label className='l1'>PASSWORD</label>
-    </div>
-    
-     <input type="text" className='input1'/>
-     <Sub>
-       <input type="checkbox" id="cb"/>
-       <p>Subscribe to stay updated with new offers!</p>
-     </Sub>
-     <Button onClick={()=> {navigate("/")}}>CREATE</Button><br/>
-     
-
-    </Inputitem>
-    <hr/>
-    <Offer>
+        <input type="text" className="input1" />
+        <Sub>
+          <input type="checkbox" id="cb" />
+          <p style={{marginTop: "16px"}}>Subscribe to stay updated with new offers!</p>
+        </Sub>
+        <Button
+          onClick={() => {
+            navigate("/signin");
+          }}
+        >
+          CREATE
+        </Button>
+        <br />
+      </Inputitem>
+      <hr />
+      {/* <Offer>
       {BelowData.map((elem) => {
         return(
           <div key={elem.id}>
@@ -132,9 +137,9 @@ const Register = () => {
         )
       })}
 
-    </Offer>
+    </Offer> */}
     </div>
-  )
+  );
 }
 
 export default Register
