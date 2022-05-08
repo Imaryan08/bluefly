@@ -1,0 +1,184 @@
+#top_nav{
+    display: flex;
+    margin-left: 10%;
+    width: 90%;
+    
+        }
+      #image_logo{
+         margin-top: 1%;
+         margin-left: 5%;
+    
+      }
+    
+        #information{
+            display:flex;
+            margin-left: 13%;
+            margin-top: 1%;
+            width: 60%;
+            height: 60px;
+            /* border: 1px solid black; */
+        } 
+        /* #information>img{
+            width: 100%;
+            height: 100%;
+            margin-top: 0%;
+        } */
+        #lower_det{
+            width: 80%;
+            height: 800px;
+            border: 1px   black;
+            margin-top: 2%;
+            margin-left: 10%;
+            display: flex;
+        }
+        #cart_left{
+            width: 90%;
+            height: 100%;
+            border: 1px   red;
+            margin-left: 5%;
+            font-family: sans-serif;
+            /* border: 1px solid; */
+        }
+        #cart_right{
+            /* margin-left: 2%; */
+            width: 60%;
+            height: 100%;
+            border: 1px   red;
+            background-color: 
+    #fafafa;
+    font-family: sans-serif;
+        }
+        #cart_left p{
+          font-size: 20px;
+          margin-top: 0%;
+          font-family: sans-serif;
+          
+          width: 90%;
+        }
+        #width{
+            width: 85%;
+            height: 6%;
+            border-radius: 5px;
+            font-family: sans-serif;
+        }
+        #name_info{
+            width: 41%;
+            height: 6%;
+            border-radius: 5px;
+        }
+        .last{
+            margin-left: 1%;
+        }
+        #city_add{
+            width: 27%;
+            height: 6%;
+            border-radius: 5px;
+        }
+        #widt{
+            width: 85%;
+            height: 6%;
+            border-radius: 5px;
+            font-family: sans-serif;
+        }
+        #phone_info{
+            width: 200px;
+            height: 50px;
+            border: 1px  black;
+            text-align: center;
+            margin-left: 72%;
+            background-color: grey;
+            color: white;
+            display: none;
+        }
+        #button_shipping{
+            margin-left: 50%;
+            width: 38%;
+            height: 8%;
+            background-color: #000000;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: sans-serif;
+            font-size: 15px;
+        }
+        
+        #question{
+            cursor: pointer;
+        }
+        #upper_right{
+            width: 100%;
+            margin: auto;
+            height: 40%;
+            overflow: scroll;
+            /* border: 1px solid   black; */
+        }
+        #lower_right{
+         margin-left: 5%;
+            width: 95%;
+            height: 60%;
+            margin-top: 5%;
+            /* border: 1px solid black; */
+            font-family: sans-serif;
+        }
+        #gift_card_bx{
+            width: 70%;
+            height: 10%;
+            border-radius: 5px;
+        }
+        #apply{
+            width: 26%;
+            height: 11%;
+            border-radius: 3px;
+        }
+        body{
+            font-family: sans-serif;
+        }
+        #topmsg{
+            display: inline;
+            /* border: 1px solid; */
+            width: 80%;
+            height: 10%;
+            text-align: left;
+        }
+        #topmsg>p{
+            font-size: 13px;
+        }
+        #image_logo:hover{
+            cursor: pointer;
+        }
+      .d1{
+          background-color: #5a31f4;
+          color:white;
+          height:33px;
+          width:170px;
+          padding-top:13px;
+          text-align: center;
+          font-weight: bolder;
+          border-radius: 7px;
+      }
+      #information>div {
+          margin-left: 6%;
+      }
+      .d2{
+        background-color: #ffc439;
+        color:#083484;
+        height:33px;
+        width:170px;
+        padding-top:13px;
+        text-align: center;
+        font-weight:760;
+        border-radius: 7px; 
+      }
+      .d3{
+        background-color: black;
+        color:white;
+        height:33px;
+        width:170px;
+        padding-top:13px;
+        text-align: center;
+        font-weight:700;
+        border-radius: 7px; 
+      }
+      #extra_item{
+          font-size: 13px;
+      }
