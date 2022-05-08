@@ -80,7 +80,10 @@ const Signup = () => {
   const handleAuth =(e)=> {
     e.preventDefault();
     let data = JSON.parse(localStorage.getItem ("auth"));
-    if(data.email === final.mail && data.pass === final.password){
+    if(final.mail == "" || final.password==""){
+      alert("please fill all details..")
+    }
+    else if(data.email === final.mail && data.pass === final.password){
       navigate("/")
     }else{
       alert("Invalid Email and Password");
