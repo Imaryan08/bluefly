@@ -1,0 +1,85 @@
+.onepro{
+    padding: 5%;
+    display: flex;
+    text-align: left;
+    padding: 5%;
+    font-family: 'Futura', sans-serif;
+}
+
+.forimg{
+    padding: 5%;
+    flex: 1;
+    width: 50%;
+    height: 80%;
+}
+
+.forinfo{
+    padding: 4%;
+    flex: 1;
+    width: 50%;
+    border: 1px solid rgb(245, 235, 235);
+}
+
+.ow{
+    font-size: larger;
+    font-weight: 700;
+}
+
+h1{ 
+    font-family: Tiemann,serif;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+
+.black{
+    color:white;
+    background-color: black;
+    padding: 1%;
+    font-family: 'Futura', sans-serif;
+    width: 80%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.fl{
+    display: flex;
+    justify-content: left;
+    width: 100%;
+    margin: 10px 0;
+}
+
+@media only screen and (min-width:321px) and (max-width:720px)
+{
+    .onepro{
+    display: block;
+}
+.forimg{
+  width: 80%;
+}
+
+.forinfo{
+    width: 80%;
+}
+
+
+}
+
+@media only screen and (min-width:0px) and (max-width:320px){
+
+    .onepro{
+        display: block;
+    }
+    .forimg{
+      width: 100%;
+    }
+    
+    .forinfo{
+        width: 100%;
+    }
+    
+}
+
+
