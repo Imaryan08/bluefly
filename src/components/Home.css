@@ -1,8 +1,5 @@
-.home{
-    padding-bottom: 50px;
-}
 .slideshow{
-    width: 100%;
+    width: 1500px;
     /* margin-top: 20px; */
 }
 
@@ -27,7 +24,7 @@
 }
 .shop2{
     display: flex;
-    /* width: 100%; */
+    /* width: 1500px; */
     margin-left: 100px;
     margin-top: 30px;
     /* border: 1px solid; */
@@ -80,7 +77,7 @@
     /* border: 2px solid red; */
 }
 .diva-1{
-    width: 12%;
+    width: 200px;
     height: 80%;
     /* border: 1px solid; */
     margin: 50px;
@@ -99,8 +96,7 @@
     color: red;
 }
 .btn1{
-    margin-top: 70px;
-
+    margin-top: 30px;
     width: 110px;
     font-size: small;
     padding: 10px;
@@ -118,7 +114,7 @@
         flex-direction: column;
     }
     .slideshow{
-        width: 100%;
+        width: 700px;
         margin: auto;
     }
     .shop-11{
