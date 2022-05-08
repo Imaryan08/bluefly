@@ -116,7 +116,7 @@ const Signup = () => {
           <label className="l1">Forgot password?</label>
         </div>
 
-        <input type="text" className="input1" />
+        <input type="password" className="input1" />
         <Button
           onClick={() => {
             navigate("/");

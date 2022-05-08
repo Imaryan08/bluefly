@@ -108,61 +108,63 @@ const Register = () => {
       </Container>
       <Heading>CREATE ACCOUNT</Heading>
       <Inputitem>
-        <div>
-          <label className="l1" style={{ marginLeft: "-380px" }}>
-            FIRST NAME
-          </label>
-          <br />
-          <input type="text" className="input1" />
-        </div>
-        <div className="pass">
-          <label className="l1">LAST NAME</label>
-        </div>
+        <form>
+          <div>
+            <label className="l1" style={{ marginLeft: "-380px" }}>
+              FIRST NAME
+            </label>
+            <br />
+            <input type="text" className="input1" required />
+          </div>
+          <div className="pass">
+            <label className="l1">LAST NAME</label>
+          </div>
 
-        <input type="text" className="input1" />
+          <input type="text" className="input1" required name="lName" />
 
-        <div className="wap">
-          <label className="l1" style={{ marginLeft: "-410px" }}>
-            EMAIL
-          </label>
-          <br />
+          <div className="wap">
+            <label className="l1" style={{ marginLeft: "-410px" }}>
+              EMAIL
+            </label>
+            <br />
+            <input
+              type="email"
+              className="input1"
+              id="email"
+              onChange={(e) => {
+                handleChange(e);
+              }}
+            />
+          </div>
+          <div className="pass1">
+            <label className="l1">PASSWORD</label>
+          </div>
+
           <input
-            type="email"
+            type="password"
             className="input1"
-            id="email"
+            id="pass"
             onChange={(e) => {
               handleChange(e);
             }}
           />
-        </div>
-        <div className="pass1">
-          <label className="l1">PASSWORD</label>
-        </div>
+          <Sub>
+            <input type="checkbox" id="cb" />
+            <p style={{ marginTop: "16px" }}>
+              Subscribe to stay updated with new offers!
+            </p>
+          </Sub>
+          <Button
+            onClick={(e) => {
+              handleSubmit(e);
+            }}
+          >
+            CREATE
+          </Button>
+          <br />
 
-        <input
-          type="password"
-          className="input1"
-          id="pass"
-          onChange={(e) => {
-            handleChange(e);
-          }}
-        />
-        <Sub>
-          <input type="checkbox" id="cb" />
-          <p style={{ marginTop: "16px" }}>
-            Subscribe to stay updated with new offers!
-          </p>
-        </Sub>
-        <Button
-          onClick={(e) => {
-            handleSubmit(e);
-          }}
-        >
-          CREATE
-        </Button>
-        <br />
-
-        <br />
+          <br />
+        </form>
       </Inputitem>
       <hr />
       {/* <Offer>
