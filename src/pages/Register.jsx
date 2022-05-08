@@ -154,12 +154,14 @@ const Register = () => {
           </p>
         </Sub>
         <Button
-          onClick={() => {
-            navigate("/signin");
+          onClick={(e) => {
+            handleSubmit(e);
           }}
         >
           CREATE
         </Button>
+        <br />
+
         <br />
       </Inputitem>
       <hr />
