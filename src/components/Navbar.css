@@ -1,71 +1,73 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
-.navbar{
-     height: 120px;
-     width: 100%;
-     position:fixed;
-     background-color: white;
-     /* border: 3px solid; */
+.navbar {
+  /* height: 120px; */
+  width: 100%;
+  position: fixed;
+  background-color: white;
+  /* border: 3px solid; */
+  z-index: 10;
+  margin-top: -30px;
 }
-.top-div{
-    height: 70px;
-    width: 100%;
-    display: flex;
-    /* border: 1px solid red; */
+.top-div {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  /* border: 1px solid red; */
 }
-.not-use{
-    height: 100%;
-    width: 15%;
+.not-use {
+  height: 100%;
+  width: 15%;
 }
-.web-name{
-    height: 100%;
-    width: 60%;
-    text-align: center;
-    margin-top: 12px;
-    margin-left: 100px;
-    /* border: 1px solid green;   */
-}
-
-.other-info{
-    height: 100%;
-    width: 20%;
-    /* border: 1px solid lawngreen; */
-}
-.bottom-div{
-    width: 100%;
-    height: 50px;
-    /* border:  1px solid blue; */
+.web-name {
+  height: 100%;
+  width: 60%;
+  text-align: center;
+  margin-top: 12px;
+  margin-left: 400px;
+  /* border: 1px solid green;   */
 }
 
-.nav{
-    margin: 20px;
-    text-decoration: none;
-    color: black;
-    letter-spacing: 1.1px;
-    /* justify-content: space-between; */
+.other-info {
+  height: 100%;
+  width: 20%;
+  /* border: 1px solid lawngreen; */
 }
-.clear{
-    color: red;
-    text-decoration: none;
+.bottom-div {
+  width: 100%;
+  height: 50px;
+  /* border:  1px solid blue; */
 }
 
-.login > img{
-    width: 35px;
-    padding: 10px;
-    /* margin-top: 10px; */
-    /* margin: 20px; */
+.nav {
+  margin: 20px;
+  text-decoration: none;
+  color: black;
+  letter-spacing: 1.1px;
+  /* justify-content: space-between; */
 }
-.cart > img{
-    width: 45px;
-    padding: 10px;
-    /* margin-top: 5px; */
+.clear {
+  color: red;
+  text-decoration: none;
 }
-.search >img{
-    width: 40px;
-    padding: 10px;
+
+.login > img {
+  width: 35px;
+  padding: 10px;
+  /* margin-top: 10px; */
+  /* margin: 20px; */
 }
-span{
-    padding: 20px;
+.cart > img {
+  width: 45px;
+  padding: 10px;
+  /* margin-top: 5px; */
+}
+.search > img {
+  width: 40px;
+  padding: 10px;
+}
+span {
+  padding: 20px;
 }

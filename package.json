@@ -8,11 +8,22 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@chakra-ui/react": "^1.8.8",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.2.0",
+    "@testing-library/user-event": "^14.1.1",
+    "axios": "^0.27.2",
     "font-awesome": "^4.7.0",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
+    "react": "^17.0.2",
+    "react-carousel-minimal": "^1.4.1",
+    "react-dom": "^17.0.2",
+    "react-image-gallery": "^1.2.7",
+    "react-redux": "^8.0.1",
     "react-router-dom": "^6.3.0",
-    "styled-components": "^5.3.5"
+    "react-scripts": "^5.0.1",
+    "redux": "^4.2.0",
+    "styled-components": "^5.3.5",
+    "web-vitals": "^2.1.4"
   },
   "devDependencies": {
     "@types/react": "^18.0.0",
