@@ -47,7 +47,7 @@ function App() {
       <Header/>
       <Routes>
         <Route path='/' element={<Home />}/>
-        <Route path="/signin" element={<Signup/>}></Route>
+        <Route path="/signup" element={<Signup/>}></Route>
         <Route path="/register" element={<Register/>}></Route>
         <Route path='/information' element={<Imformation onAdd={onAdd} onRemove={onRemove} cart={cart} />}/>
       

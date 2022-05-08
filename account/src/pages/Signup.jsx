@@ -67,26 +67,6 @@ const Signup = () => {
   const slideLength = slideData.length;
   let navigate = useNavigate();
 
-  const [final,setFinal] = useState({
-    mail:"",
-    password:""
-  });
-
-  const handleChange = (e)=> {
-     setFinal({
-       ...final,[e.target.id]:e.target.value
-     });
-  }
-  const handleAuth =(e)=> {
-    e.preventDefault();
-    let data = JSON.parse(localStorage.getItem ("auth"));
-    if(data.email === final.mail && data.pass === final.password){
-      navigate("/")
-    }else{
-      alert("Invalid Email and Password");
-    }
-  }
- 
   const autoScroll = true;
   let slideInterval;
   let intervalTime = 4000;
@@ -128,7 +108,7 @@ const Signup = () => {
     <div>
     <label className='l1'>EMAIL</label>
      <br/>
-     <input type="text" className='input1' id="mail" onChange={(e)=> {handleChange(e)}}/>
+     <input type="text" className='input1'/>
 
     </div>
     <div  className='pass'>
@@ -136,9 +116,8 @@ const Signup = () => {
     <label className='l1'>Forgot password?</label>
     </div>
     
-     <input type="text" className='input1' id="password" onChange={(e)=> {handleChange(e)}}/>
-
-     <Button onClick={(e)=> {handleAuth(e)}}>SIGN IN</Button><br/>
+     <input type="text" className='input1'/>
+     <Button onClick={()=> {navigate("/")}}>SIGN IN</Button><br/>
      <Create onClick={()=> {navigate("/register")}}>Create account</Create>
 
     </Inputitem>

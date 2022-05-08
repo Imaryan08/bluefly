@@ -4,7 +4,7 @@
 }
 .navbar{
      height: 120px;
-     width: 1500px;
+     width: 100%;
      position:fixed;
      background-color: white;
      /* border: 3px solid; */
@@ -23,8 +23,7 @@
     height: 100%;
     width: 60%;
     text-align: center;
-    margin-top: 15px;
-    margin-left: 70px;
+    margin-top: 10px;
     /* border: 1px solid green;   */
 }
 

@@ -46,35 +46,8 @@ const Inputitem = styled.div`
 
 const Register = () => {
   const [currentSlide , setCurrentSlide] = useState(0);
-  const [check , setCheck] = useState({
-    email:"",
-    pass:""
-  });
-
-
- 
   const slideLength = slideData.length;
   let navigate = useNavigate();
-
-  const handleChange=(e)=> {
-    setCheck({
-      ...check,[e.target.id]:e.target.value
-    });
-  }
-
-  const handleSubmit =(e)=> {
-    e.preventDefault();
-    if(check.email === "" || check.pass === ""){
-      alert("Please fill all details...")
-    }
-    else{
-      //console.log(check);
-      localStorage.setItem("auth", JSON.stringify(check));
-      navigate("/signin")
-    }
-    
-    
-  }
 
   const autoScroll = true;
   let slideInterval;
@@ -129,19 +102,19 @@ const Register = () => {
      <div className='wap'>
     <label className='l1'>EMAIL</label>
      <br/>
-     <input type="text" className='input1' id="email" onChange={(e)=>{handleChange(e)}}/>
+     <input type="text" className='input1'/>
 
     </div>
     <div  className='pass1'>
     <label className='l1'>PASSWORD</label>
     </div>
     
-     <input type="text" className='input1' id="pass" onChange={(e)=>{handleChange(e)}}/>
+     <input type="text" className='input1'/>
      <Sub>
        <input type="checkbox" id="cb"/>
        <p>Subscribe to stay updated with new offers!</p>
      </Sub>
-     <Button onClick={(e)=> {handleSubmit(e)}}>CREATE</Button><br/>
+     <Button onClick={()=> {navigate("/")}}>CREATE</Button><br/>
      
 
     </Inputitem>
