@@ -1,15 +1,26 @@
  import React from 'react'
  import styled from 'styled-components';
 import "./Cart.css";
-import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 
 
 
 export const Cartdiv = styled.div`
-     border:1px solid red;
+    
      height:655px;
      width:400px;
-     margin-left: 71.6%;
+     top:0px;
+     margin-left: 71%;
+     position: fixed;
+     top: 0;
+    bottom: 0;
+    padding: 0 15px 15px;
+    max-width: 95%;
+    z-index: 30;
+    background-color: #fff;
+    box-shadow: 0 0px 100px 150px #0000001a;
+    transition: transform .25s cubic-bezier(.165,.84,.44,1);
  `
  const Heading = styled.h1`
  font-family: Tiemann ,serif;
@@ -23,11 +34,14 @@ export const Cartdiv = styled.div`
  margin-left: 6%;
  
 `
-const Item = styled.div`
-    border:1px solid blue;
+export const Item = styled.div`
+  
     height:340px;
     width:91%;
     margin:17px 17px;
+    overflow: scroll;
+    overflow-wrap: unset;
+    overflow-x: hidden;
 `
 const Total = styled.div`
     display:flex;
@@ -48,8 +62,12 @@ cursor: pointer;
 margin-left: 21px;
 `
  
- const Cart = () => { 
+ const Cart = (props) => { 
 
+    const {cart , onAdd , onRemove } = props;
+    const itemsPrice = cart.reduce((a,c) => a+ c.price * c.qty ,0);
+    const navigate = useNavigate();
+  
   
   function handleChange(){
     
@@ -67,15 +85,48 @@ margin-left: 21px;
         </div>
         <hr/>
         <Item>
+       
+
+             <div>{cart.length === 0 && <div>Cart is Empty</div>}</div>
+             {cart.map((item)=> (
+              <div key={item.id} className="product2" >
+            
+              <div className="set1">
+              <img className='pic1' src={item.img} alt={item.id}/>
+              <div className="set2">
+              <span>{item.disp}</span>
+              <div className="set4">
+                  <div className="set5">
+                      <img  style={{cursor:"pointer"}} 
+                      onClick={()=> onAdd(item)}
+                      src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/2x/external-plus-science-education-dreamstale-lineal-dreamstale.png"/>
+                      <div className="set6">{item.qty === 0 ? null : item.qty}</div>
+                      <img style={{cursor:"pointer"}} 
+                      onClick={()=> onRemove(item)}
+                      className='pic2'
+                      src="https://img.icons8.com/fluency-systems-regular/2x/minus-math.png"/>
+
+
+                  </div>
+                  <p className="total">{item.qty} x {item.price.toFixed(2)}</p>   
+
+              </div>
+              </div> 
+              </div>
+            </div>
+
+             ))}
+          
+        
 
         </Item>
         <hr/>
         <Total>
             <p className='sub_total'>SUBTOTAL</p>
-            <p className='total'>$ 949.99</p>
+            <p className='total'>$ {itemsPrice}</p>
         </Total>
         <div className='sub_des'>Shipping, taxes, and discounts codes calculated at checkout.</div>
-        <Button>CHECK OUT</Button><br/>
+        <Button onClick={()=> {navigate("/information")}}>CHECK OUT</Button><br/>
 
 
          
