@@ -192,7 +192,7 @@ export const Footers = () => {
               alt=""
             />
           </div>
-          <p>
+          <p style={{marginTop: "20px", fontWeight: "bold"}}>
             © 2022 Bluefly 1998-2020 BLUEFLY.COM OR ITS AFFILIATES ALL RIGHTS
             RESERVED.
           </p>
