@@ -46,31 +46,35 @@ const Inputitem = styled.div`
 
 const Register = () => {
   const [currentSlide , setCurrentSlide] = useState(0);
-  const [check, setCheck] = useState({
-    email: "",
-    pass: "",
+  const [check , setCheck] = useState({
+    email:"",
+    pass:""
   });
 
+
+ 
   const slideLength = slideData.length;
   let navigate = useNavigate();
 
-  const handleChange = (e) => {
+  const handleChange=(e)=> {
     setCheck({
-      ...check,
-      [e.target.id]: e.target.value,
+      ...check,[e.target.id]:e.target.value
     });
-  };
+  }
 
-  const handleSubmit = (e) => {
+  const handleSubmit =(e)=> {
     e.preventDefault();
-    if (check.email === "" || check.pass === "") {
-      alert("Please fill all details...");
-    } else {
+    if(check.email === "" || check.pass === ""){
+      alert("Please fill all details...")
+    }
+    else{
       //console.log(check);
       localStorage.setItem("auth", JSON.stringify(check));
-      navigate("/signin");
+      navigate("/signin")
     }
-  };
+    
+    
+  }
 
   const autoScroll = true;
   let slideInterval;
@@ -92,82 +96,57 @@ const Register = () => {
  },[currentSlide])
 
   return (
-    <div className="register-page">
-      <Container className="slide">
-        {slideData.map((slide, index) => {
-          return (
-            <div key={index}>
-              {index === currentSlide && (
-                <>
-                  <p className="item">{slide.title}</p>
-                </>
-              )}
-            </div>
-          );
-        })}
-      </Container>
-      <Heading>CREATE ACCOUNT</Heading>
-      <Inputitem>
-        <form>
-          <div>
-            <label className="l1" style={{ marginLeft: "-380px" }}>
-              FIRST NAME
-            </label>
-            <br />
-            <input type="text" className="input1" required />
-          </div>
-          <div className="pass">
-            <label className="l1">LAST NAME</label>
-          </div>
+    <div className='register-page'>
+        <Container className='slide'>
+      {slideData.map((slide,index) => {
+        return (
+          <div key={index} >
+            {index===currentSlide && (
+              <>
+              <p className='item'>{slide.title}</p>
+              </>
+            )}
 
-          <input type="text" className="input1" required name="lName" />
-
-          <div className="wap">
-            <label className="l1" style={{ marginLeft: "-410px" }}>
-              EMAIL
-            </label>
-            <br />
-            <input
-              type="email"
-              className="input1"
-              id="email"
-              onChange={(e) => {
-                handleChange(e);
-              }}
-            />
           </div>
-          <div className="pass1">
-            <label className="l1">PASSWORD</label>
-          </div>
+         
+        )
+      })}
+    </Container>
+    <Heading>CREATE ACCOUNT</Heading>
+    <Inputitem>
+    <div>
+    <label className='l1'>FIRST NAME</label>
+     <br/>
+     <input type="text" className='input1'/>
 
-          <input
-            type="password"
-            className="input1"
-            id="pass"
-            onChange={(e) => {
-              handleChange(e);
-            }}
-          />
-          <Sub>
-            <input type="checkbox" id="cb" />
-            <p style={{ marginTop: "16px" }}>
-              Subscribe to stay updated with new offers!
-            </p>
-          </Sub>
-          <Button
-            onClick={(e) => {
-              handleSubmit(e);
-            }}
-          >
-            CREATE
-          </Button>
-          <br />
+    </div>
+    <div  className='pass'>
+    <label className='l1'>LAST NAME</label>
+    </div>
+    
+     <input type="text" className='input1'/>
+    
+     <div className='wap'>
+    <label className='l1'>EMAIL</label>
+     <br/>
+     <input type="text" className='input1' id="email" onChange={(e)=>{handleChange(e)}}/>
 
-          <br />
-        </form>
-      </Inputitem>
-      <hr />
-      {/* <Offer>
+    </div>
+    <div  className='pass1'>
+    <label className='l1'>PASSWORD</label>
+    </div>
+    
+     <input type="text" className='input1' id="pass" onChange={(e)=>{handleChange(e)}}/>
+     <Sub>
+       <input type="checkbox" id="cb"/>
+       <p>Subscribe to stay updated with new offers!</p>
+     </Sub>
+     <Button onClick={(e)=> {handleSubmit(e)}}>CREATE</Button><br/>
+     
+
+    </Inputitem>
+    <hr/>
+    <Offer>
       {BelowData.map((elem) => {
         return(
           <div key={elem.id}>
@@ -180,9 +159,9 @@ const Register = () => {
         )
       })}
 
-    </Offer> */}
+    </Offer>
     </div>
-  );
+  )
 }
 
 export default Register

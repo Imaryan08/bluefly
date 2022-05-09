@@ -133,8 +133,9 @@ footer {
   background-color: #e6e6e6;
   text-align: center;
   font-size: 12px;
+  font-weight: bold;
   padding: 7.5px 0;
-  padding-top: 30px;
+  /* padding-top: 30px; */
   color: rgb(63, 60, 60);
   /* border: 1px solid red; */
   width: 100%;
@@ -143,6 +144,9 @@ footer {
   width: 18%;
   margin-bottom: 10px;
   cursor: pointer;
+  margin: auto;
+  padding-bottom: 10px;
+  
 }
 /* media query */
 
