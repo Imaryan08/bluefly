@@ -2,10 +2,12 @@ import React from "react";
 import "./Imformation.css";
 import { Item } from "./Cart";
 import "./Cart.css";
+import { useNavigate } from "react-router-dom";
 
 const Imformation = (props) => {
   const { cart, onAdd, onRemove } = props;
   const itemsPrice = cart.reduce((a, c) => a + c.price * c.qty, 0);
+  let navigate = useNavigate();
 
   return (
     <div className="shipping">
@@ -91,7 +93,7 @@ const Imformation = (props) => {
           <input type="checkbox" style={{ marginLeft: "-260px" }} /> Save this
           information for next time <br />
           <br />
-          <button id="button_shipping">Continue to shipping</button>
+          <button id="button_shipping" onClick={() => {navigate("/pay")}}>Continue to shipping</button>
           <br />
           <br />
           <br />
@@ -170,7 +172,9 @@ const Imformation = (props) => {
               <span style={{ marginRight: "200px", marginLeft: "-10px" }}>
                 Total
               </span>
-              <span id="tot2" style={{marginLeft: "50px"}}>₹{itemsPrice}</span>
+              <span id="tot2" style={{ marginLeft: "50px" }}>
+                ₹{itemsPrice}
+              </span>
             </p>
             {/* <p>Your total saving &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;   &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; Rs. 0.00  </p> */}
           </div>
