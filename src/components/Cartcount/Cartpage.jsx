@@ -20,6 +20,8 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 
 export function Cartpage(isOpen, onOpen, onClose, setsidebar, sidebar) {
   const [items, setItems] = useState([]);
@@ -61,8 +63,11 @@ export function Cartpage(isOpen, onOpen, onClose, setsidebar, sidebar) {
     getCartData();
   }, [qty]);
 
+  let navigate = useNavigate();
+
   return (
-    <div>
+
+    <div style={{marginTop: "30px"}}>
       <Drawer placement="right" onClose={onClose} isOpen={isOpen} size="md">
         <DrawerOverlay />
         <DrawerContent>
@@ -74,7 +79,8 @@ export function Cartpage(isOpen, onOpen, onClose, setsidebar, sidebar) {
             </h1>
             <DrawerCloseButton
               onClick={() => {
-                window.location.reload();
+                navigate('/');
+                // window.location.reload('/');
                 // setsidebar(false);
               }}
               mt="4"
@@ -82,7 +88,7 @@ export function Cartpage(isOpen, onOpen, onClose, setsidebar, sidebar) {
           </DrawerHeader>
           <DrawerBody>
             {items.map((e) => {
-              return e.id == id ? (
+              return e.id == id ? ( 
                 <Box mb="5">
                   <Grid
                     templateRows="auto"

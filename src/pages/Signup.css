@@ -7,7 +7,9 @@
     font-size: 12.8px;
     
 }
-
+input{
+    padding: 18px 10px !important;
+}
 .input1{
     height:25px;
     width:94%;

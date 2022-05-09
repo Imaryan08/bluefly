@@ -58,7 +58,7 @@ export const Navbar= ()=>{
             JEWELRY & WATCHES
           </Link>
           <Link className="nav" to="/signin">
-            LOGIN
+            👤 LOGIN
           </Link>
           <Link className="nav" to="/cart">
             🛒CART

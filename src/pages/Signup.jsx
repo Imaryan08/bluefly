@@ -110,59 +110,92 @@ const Signup = () => {
  },[currentSlide])
 
   return (
-    <div className='login-page'>
-    <Container className='slide'>
-      {slideData.map((slide,index) => {
-        return (
-          <div key={index} >
-            {index===currentSlide && (
-              <>
-              <p className='item'>{slide.title}</p>
-              </>
-            )}
+    <div className="login-page" style={{ marginTop: "30px" }}>
+      <Container className="slide">
+        {slideData.map((slide, index) => {
+          return (
+            <div key={index}>
+              {index === currentSlide && (
+                <>
+                  <p className="item">{slide.title}</p>
+                </>
+              )}
+            </div>
+          );
+        })}
+      </Container>
+      <Heading>LOGIN</Heading>
+      <Inputitem>
+        <div>
+          <label className="l1" style={{ marginLeft: "-390px" }}>
+            EMAIL
+          </label>
+          <br />
+          <input
+            type="email"
+            className="input1"
+            id="mail"
+            onChange={(e) => {
+              handleChange(e);
+            }}
+          />
+        </div>
+        <div className="pass">
+          <label className="l1" style={{ marginLeft: "12px" }}>
+            PASSWORD
+          </label>
+          <label className="l1" style={{ marginRight: "20px" }}>
+            Forgot password?
+          </label>
+        </div>
 
-          </div>
-         
-        )
-      })}
-    </Container>
-    <Heading>LOGIN</Heading>
-    <Inputitem>
-    <div>
-    <label className='l1'>EMAIL</label>
-     <br/>
-     <input type="text" className='input1' id="mail" onChange={(e)=> {handleChange(e)}}/>
+        <input
+          type="password"
+          className="input1"
+          id="password"
+          onChange={(e) => {
+            handleChange(e);
+          }}
+        />
 
-    </div>
-    <div  className='pass'>
-    <label className='l1'>PASSWORD</label>
-    <label className='l1'>Forgot password?</label>
-    </div>
-    
-     <input type="text" className='input1' id="password" onChange={(e)=> {handleChange(e)}}/>
-
-     <Button onClick={(e)=> {handleAuth(e)}}>SIGN IN</Button><br/>
-     <Create onClick={()=> {navigate("/register")}}>Create account</Create>
-
-    </Inputitem>
-    <hr/>
-    <Offer>
-      {BelowData.map((elem) => {
-        return(
-          <div key={elem.id}>
-              <img src={elem.image} className="pics" style={{cursor: "pointer"}}/>
-              <p className='p1'>{elem.disp}</p>
+        <Button
+          onClick={(e) => {
+            handleAuth(e);
+          }}
+        >
+          SIGN IN
+        </Button>
+        <br />
+        <Create
+          style={{ marginLeft: "-170px", marginTop: "10px", fontSize: "18px" }}
+          onClick={() => {
+            navigate("/register");
+          }}
+        >
+          Create account
+        </Create>
+      </Inputitem>
+      <hr />
+      <Offer>
+        {BelowData.map((elem) => {
+          return (
+            <div key={elem.id}>
+              <img
+                src={elem.image}
+                className="pics"
+                style={{ cursor: "pointer" }}
+              />
+              <p className="p1">{elem.disp}</p>
               <p>{elem.short}</p>
-              <button className='btn-modi' style={{cursor: "pointer"}} >{elem.btn}</button>
-          </div>
-         
-        )
-      })}
-
-    </Offer>
-   
+              <button className="btn-modi" style={{ cursor: "pointer" }}>
+                {elem.btn}
+              </button>
+            </div>
+          );
+        })}
+      </Offer>
     </div>
-  )
+  );
 }
 
 export default Signup

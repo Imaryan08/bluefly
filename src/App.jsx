@@ -14,6 +14,7 @@ import { Cartprod } from "./components/Context";
 import { useContext } from "react";
 import Imformation from "./pages/Imformation";
 import Paymentpage from "./components/Paymentpage";
+import { Cartpage } from "./components/Cartcount/Cartpage";
 
 
 function App() {
@@ -57,6 +58,7 @@ function App() {
         <Route path="/product" element={<Productcomp />}></Route>
         <Route path="/product/:id" element={<Singletodo />}></Route>
         <Route path="/pay" element={<Paymentpage />}></Route>
+        <Route path="/cart" element={<Cartpage />}></Route>
         <Route
           path="/payment"
           element={

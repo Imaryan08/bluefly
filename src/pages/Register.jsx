@@ -96,72 +96,101 @@ const Register = () => {
  },[currentSlide])
 
   return (
-    <div className='register-page'>
-        <Container className='slide'>
-      {slideData.map((slide,index) => {
-        return (
-          <div key={index} >
-            {index===currentSlide && (
-              <>
-              <p className='item'>{slide.title}</p>
-              </>
-            )}
+    <div className="register-page" style={{ marginTop: "30px" }}>
+      <Container className="slide">
+        {slideData.map((slide, index) => {
+          return (
+            <div key={index}>
+              {index === currentSlide && (
+                <>
+                  <p className="item">{slide.title}</p>
+                </>
+              )}
+            </div>
+          );
+        })}
+      </Container>
+      <Heading>CREATE ACCOUNT</Heading>
+      <Inputitem>
+        <div>
+          <label className="l1" style={{ marginLeft: "-360px" }}>
+            FIRST NAME
+          </label>
+          <br />
+          <input type="text" className="input1" />
+        </div>
+        <div className="pass">
+          <label className="l1" style={{ marginLeft: "10px" }}>
+            LAST NAME
+          </label>
+        </div>
 
-          </div>
-         
-        )
-      })}
-    </Container>
-    <Heading>CREATE ACCOUNT</Heading>
-    <Inputitem>
-    <div>
-    <label className='l1'>FIRST NAME</label>
-     <br/>
-     <input type="text" className='input1'/>
+        <input type="text" className="input1" />
 
-    </div>
-    <div  className='pass'>
-    <label className='l1'>LAST NAME</label>
-    </div>
-    
-     <input type="text" className='input1'/>
-    
-     <div className='wap'>
-    <label className='l1'>EMAIL</label>
-     <br/>
-     <input type="text" className='input1' id="email" onChange={(e)=>{handleChange(e)}}/>
+        <div className="wap">
+          <label className="l1" style={{ marginLeft: "-390px" }}>
+            EMAIL
+          </label>
+          <br />
+          <input
+            type="text"
+            className="input1"
+            id="email"
+            onChange={(e) => {
+              handleChange(e);
+            }}
+          />
+        </div>
+        <div className="pass1">
+          <label className="l1" style={{ marginLeft: "10px" }}>
+            PASSWORD
+          </label>
+        </div>
 
-    </div>
-    <div  className='pass1'>
-    <label className='l1'>PASSWORD</label>
-    </div>
-    
-     <input type="text" className='input1' id="pass" onChange={(e)=>{handleChange(e)}}/>
-     <Sub>
-       <input type="checkbox" id="cb"/>
-       <p>Subscribe to stay updated with new offers!</p>
-     </Sub>
-     <Button onClick={(e)=> {handleSubmit(e)}}>CREATE</Button><br/>
-     
-
-    </Inputitem>
-    <hr/>
-    <Offer>
-      {BelowData.map((elem) => {
-        return(
-          <div key={elem.id}>
-              <img src={elem.image} className="pics" style={{cursor: "pointer"}}/>
-              <p className='p1'>{elem.disp}</p>
+        <input
+          type="text"
+          className="input1"
+          id="pass"
+          onChange={(e) => {
+            handleChange(e);
+          }}
+        />
+        <Sub>
+          <p style={{ marginLeft: "-33px" }}>
+            <input type="checkbox" id="cb" />
+            Subscribe to stay updated with new offers!
+          </p>
+        </Sub>
+        <Button
+          onClick={(e) => {
+            handleSubmit(e);
+          }}
+        >
+          CREATE
+        </Button>
+        <br />
+      </Inputitem>
+      <hr />
+      <Offer>
+        {BelowData.map((elem) => {
+          return (
+            <div key={elem.id}>
+              <img
+                src={elem.image}
+                className="pics"
+                style={{ cursor: "pointer" }}
+              />
+              <p className="p1">{elem.disp}</p>
               <p>{elem.short}</p>
-              <button className='btn-modi' style={{cursor: "pointer"}}>{elem.btn}</button>
-          </div>
-         
-        )
-      })}
-
-    </Offer>
+              <button className="btn-modi" style={{ cursor: "pointer" }}>
+                {elem.btn}
+              </button>
+            </div>
+          );
+        })}
+      </Offer>
     </div>
-  )
+  );
 }
 
 export default Register

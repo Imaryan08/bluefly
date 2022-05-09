@@ -33,7 +33,7 @@ const SingleProduct = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
-    <div>
+    <div style={{marginTop: "30px"}}>
       {pro.map((e) =>
         e.id == id ? (
           <div className="onepro">
@@ -44,6 +44,11 @@ const SingleProduct = () => {
                     padding: "0 20px",
                   }}
                 >
+                  
+                    <div>
+                      <img src={e.img1} style={{height: "400px"}}/>
+                    </div>
+                  
                   {/* <Carousel
                     data={[
                       {
