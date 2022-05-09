@@ -1,5 +1,5 @@
 import "react-image-gallery/styles/css/image-gallery.css";
-import { Carousel } from "react-carousel-minimal";
+// import { Carousel } from "react-carousel-minimal";
 // import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
@@ -23,10 +23,12 @@ const SingleProduct = () => {
   };
 
   const getData = () => {
-    axios.get("https://bluefly-api.herokuapp.com/product").then((res) => {
-      //   setProducts(res.data);
-      setpro(res.data);
-    });
+    axios
+      .get("https://bluefly-api.herokuapp.com/product/")
+      .then((res) => {
+        //   setProducts(res.data);
+        setpro(res.data);
+      });
   };
   const { isOpen, onOpen, onClose } = useDisclosure();
 
@@ -42,7 +44,7 @@ const SingleProduct = () => {
                     padding: "0 20px",
                   }}
                 >
-                  <Carousel
+                  {/* <Carousel
                     data={[
                       {
                         image: `${e.img1}`,
@@ -76,7 +78,7 @@ const SingleProduct = () => {
                       maxHeight: "500px",
                       margin: "10px auto",
                     }}
-                  />
+                  /> */}
                 </div>
               </div>
             </div>
