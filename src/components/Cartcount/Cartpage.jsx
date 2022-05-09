@@ -152,7 +152,7 @@ export function Cartpage(isOpen, onOpen, onClose, setsidebar, sidebar) {
                   "<Payment></Payment>";
                 }}
               >
-                <Link to={"/payment"}>Payment Page</Link>
+                <Link to={"/payment"}>Checkout</Link>
               </Button>
             </Box>
           </DrawerBody>

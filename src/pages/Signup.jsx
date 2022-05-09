@@ -47,10 +47,9 @@ export const Button = styled.button`
     cursor: pointer;
 `
 export const Create = styled.p`
-   font-size: 16.8px;
+   font-size: 15.8px;
    padding-top:3px;
-   padding-left: 1.4%;
-   margin-top: 10px;
+   padding-left: 38.4%;
    cursor: pointer;
 `
 export const Offer = styled.div`
@@ -68,6 +67,29 @@ const Signup = () => {
   const slideLength = slideData.length;
   let navigate = useNavigate();
 
+  const [final,setFinal] = useState({
+    mail:"",
+    password:""
+  });
+
+  const handleChange = (e)=> {
+     setFinal({
+       ...final,[e.target.id]:e.target.value
+     });
+  }
+  const handleAuth =(e)=> {
+    e.preventDefault();
+    let data = JSON.parse(localStorage.getItem ("auth"));
+    if(final.mail == "" || final.password==""){
+      alert("please fill all details..")
+    }
+    else if(data.email === final.mail && data.pass === final.password){
+      navigate("/")
+    }else{
+      alert("Invalid Email and Password");
+    }
+  }
+ 
   const autoScroll = true;
   let slideInterval;
   let intervalTime = 4000;
@@ -88,53 +110,43 @@ const Signup = () => {
  },[currentSlide])
 
   return (
-    <div className="login-page">
-      <Container className="slide">
-        {slideData.map((slide, index) => {
-          return (
-            <div key={index}>
-              {index === currentSlide && (
-                <>
-                  <p className="item">{slide.title}</p>
-                </>
-              )}
-            </div>
-          );
-        })}
-      </Container>
-      <Heading>LOGIN</Heading>
-      <Inputitem>
-        <div>
-          <label className="l1" style={{ marginLeft: "-410px" }}>
-            EMAIL
-          </label>
-          <br />
-          <input type="text" className="input1" />
-        </div>
-        <div className="pass">
-          <label className="l1">PASSWORD</label>
-          <label className="l1">Forgot password?</label>
-        </div>
+    <div className='login-page'>
+    <Container className='slide'>
+      {slideData.map((slide,index) => {
+        return (
+          <div key={index} >
+            {index===currentSlide && (
+              <>
+              <p className='item'>{slide.title}</p>
+              </>
+            )}
 
-        <input type="password" className="input1" />
-        <Button
-          onClick={() => {
-            navigate("/");
-          }}
-        >
-          SIGN IN
-        </Button>
-        <br />
-        <Create
-          onClick={() => {
-            navigate("/register");
-          }}
-        >
-          Create account
-        </Create>
-      </Inputitem>
-      <hr />
-      {/* <Offer>
+          </div>
+         
+        )
+      })}
+    </Container>
+    <Heading>LOGIN</Heading>
+    <Inputitem>
+    <div>
+    <label className='l1'>EMAIL</label>
+     <br/>
+     <input type="text" className='input1' id="mail" onChange={(e)=> {handleChange(e)}}/>
+
+    </div>
+    <div  className='pass'>
+    <label className='l1'>PASSWORD</label>
+    <label className='l1'>Forgot password?</label>
+    </div>
+    
+     <input type="text" className='input1' id="password" onChange={(e)=> {handleChange(e)}}/>
+
+     <Button onClick={(e)=> {handleAuth(e)}}>SIGN IN</Button><br/>
+     <Create onClick={()=> {navigate("/register")}}>Create account</Create>
+
+    </Inputitem>
+    <hr/>
+    <Offer>
       {BelowData.map((elem) => {
         return(
           <div key={elem.id}>
@@ -147,9 +159,10 @@ const Signup = () => {
         )
       })}
 
-    </Offer> */}
+    </Offer>
+   
     </div>
-  );
+  )
 }
 
 export default Signup

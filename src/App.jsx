@@ -9,11 +9,40 @@ import { Footers } from "./components/Footer";
 import Register from "./pages/Register";
 import Signup from "./pages/Signup";
 import Productcomp from "./components/ProductComponents/Productcomp";
-import Singletodo from "./components/SingleProductCopm/SingleProduct";
-
+import Singletodo from "./components/SingleProductCopm/SingleProduct"
+import { Cartprod } from "./components/Context";
+import { useContext } from "react";
+import Imformation from "./pages/Imformation";
 
 
 function App() {
+  const [cart, setCart] = useContext(Cartprod);
+
+  const onAdd = (prod) => {
+    const exsit = cart.find((x) => x.id === prod.id);
+    if (exsit) {
+      setCart(
+        cart.map((x) =>
+          x.id === prod.id ? { ...exsit, qty: exsit.qty + 1 } : x
+        )
+      );
+    } else {
+      setCart([...cart, { ...prod, qty: 1 }]);
+    }
+  };
+  const onRemove = (prod) => {
+    const exsit = cart.find((x) => x.id === prod.id);
+    if (exsit.qty === 1) {
+      setCart(cart.filter((x) => x.id !== prod.id));
+    } else {
+      setCart(
+        cart.map((x) =>
+          x.id === prod.id ? { ...exsit, qty: exsit.qty - 1 } : x
+        )
+      );
+    }
+  };
+
   return (
     <div className="App">
       <div>
@@ -26,6 +55,12 @@ function App() {
         <Route path="/signin" element={<Signup />}></Route>
         <Route path="/product" element={<Productcomp />}></Route>
         <Route path="/product/:id" element={<Singletodo />}></Route>
+        <Route
+          path="/payment"
+          element={
+            <Imformation onAdd={onAdd} onRemove={onRemove} cart={cart} />
+          }
+        />
       </Routes>
 
       <div>
