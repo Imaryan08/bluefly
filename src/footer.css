@@ -143,6 +143,7 @@ footer {
 .footerLogo > img {
   width: 18%;
   margin-bottom: 10px;
+  margin: auto;
   cursor: pointer;
   margin: auto;
   padding-bottom: 10px;

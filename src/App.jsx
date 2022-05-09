@@ -13,6 +13,7 @@ import Singletodo from "./components/SingleProductCopm/SingleProduct"
 import { Cartprod } from "./components/Context";
 import { useContext } from "react";
 import Imformation from "./pages/Imformation";
+import Paymentpage from "./components/Paymentpage";
 
 
 function App() {
@@ -55,6 +56,7 @@ function App() {
         <Route path="/signin" element={<Signup />}></Route>
         <Route path="/product" element={<Productcomp />}></Route>
         <Route path="/product/:id" element={<Singletodo />}></Route>
+        <Route path="/pay" element={<Paymentpage />}></Route>
         <Route
           path="/payment"
           element={
