@@ -31,11 +31,7 @@ function Paymentpage() {
         </div>
       </div>
       <div id="sec1">
-        {/* <div id="s1">
-         <p id="r1">ITC eStore</p>
-         <div id="r2">Email: </div>
-         <div id="r3">Contact: </div>
-        </div> */}
+        
         <div id="sec2">
           <img
             style={{ height: "100%", width: "100%" }}
