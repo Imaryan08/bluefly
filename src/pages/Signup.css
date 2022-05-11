@@ -76,3 +76,13 @@ hr{
     height:15px;
     width:16px;
 }
+.signup{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1em;
+}
+.signup:hover{
+    text-decoration: underline;
+    color: blue;
+
+}

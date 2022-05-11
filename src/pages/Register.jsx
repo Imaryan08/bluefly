@@ -133,7 +133,7 @@ const Register = () => {
           </label>
           <br />
           <input
-            type="text"
+            type="email"
             className="input1"
             id="email"
             onChange={(e) => {
@@ -148,7 +148,7 @@ const Register = () => {
         </div>
 
         <input
-          type="text"
+          type="password"
           className="input1"
           id="pass"
           onChange={(e) => {

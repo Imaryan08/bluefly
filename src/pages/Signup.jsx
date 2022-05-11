@@ -80,7 +80,7 @@ const Signup = () => {
   const handleAuth =(e)=> {
     e.preventDefault();
     let data = JSON.parse(localStorage.getItem ("auth"));
-    if(final.mail == "" || final.password==""){
+    if(final.mail == "" || final.password == ""){
       alert("please fill all details..")
     }
     else if(data.email === final.mail && data.pass === final.password){
@@ -172,7 +172,7 @@ const Signup = () => {
             navigate("/register");
           }}
         >
-          Create account
+          <a className='signup'>Create an account</a>
         </Create>
       </Inputitem>
       <hr />
